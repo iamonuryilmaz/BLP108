@@ -6,31 +6,60 @@
 
 <?php
 
-$mesaj = "Merhaba";
-$mesaj2 = 'Dünya !';
+//karakter sayısını döndürür
+//echo strlen("Hello world!"); // outputs 12
 
+//cümledeki kelime sayısını döndürür
+//echo str_word_count("Hello world!"); // outputs 2
 
-$tamMetin = $mesaj." ".$mesaj2;
+//metni tersten yazdırır
+//echo strrev("Hello world!"); // outputs 
 
-//Console.Write(mesaj);
+//bir metin içerisinde bir yazı arar.
+//echo strpos("Hello world!", "world"); // outputs 6
 
-//echo ekrana yazdırma fonksiyonudur.
-//echo "$mesaj $mesaj2";
+/*$islenenDers = "BLP108r";
 
+echo $islenenDers."<br>";
 
-echo "<h2>". $tamMetin ."</h2>";
+echo str_replace("r","",$islenenDers);
+echo "BLP108";*/
 
 /*
-    echo "Merhaba Dünya !...<br>";
-    echo "Merhaba Dünya !...<br>";
-    echo "Merhaba Dünya !...<br>";
-    echo "Merhaba Dünya !...<br>";
-    echo "Merhaba Dünya !...<br>";
-    echo "Merhaba Dünya !...<br>";
-    echo "Merhaba Dünya !...<br>";
+$x = 100;
+
+echo $x; 
+
+var_dump( is_int($x) );
+
+if(is_int($x)){
+    echo "Bu bir sayıdır, matematiksel işleme hazırdır.";
+}else{
+    echo "İŞLEM YAPILAMAZ !";
+}
 */
 
+
+$str = "isimY3456!*";
+$sifreli = md5(md5(md5($str))."JKDBJH");
+
+
+echo "Acik hali: $str<br>";
+echo "HASH: $sifreli<br>";
+
+echo "<br> ------- LOGIN -------<br>";
+$girilenSifre = "isimY3456!*";
+
+if(md5($girilenSifre) == $sifreli){
+    echo "<br> ------- OTURUM AÇILDI ! -------<br>";
+
+}else{
+    echo "<br> ------- YANLIŞ ! -------<br>";
+}
+
 ?>
+
+
 
 </body>
 </html>
